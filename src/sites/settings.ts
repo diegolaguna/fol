@@ -28,4 +28,16 @@ SiteSettings["fol"] = {
     }
 }
 
+SiteSettings["bm"] = {
+    url: "https://bullmarketbrokers.com",
+    actions: "bm/actions",
+    viewport: {
+        width: 800,
+        height: 600
+    },
+    proxy: {
+        ip: "10.0.0.1",
+        port: "80"
+    }
+}
 export { SiteSettings }

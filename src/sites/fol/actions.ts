@@ -14,12 +14,10 @@ export async function main (site_settings: ISiteSetting, pptr_settings: IPptrSet
   
   await GoToFondos(page)
   const selects = await GetSelects(page)
-  for (const select_promise of selects) {
-    const select = await select_promise
-    console.log(`Select ID: ${select.text}`)
-    const options = await GetOptions(select.handler)
+  for (const id of selects) {
+    console.log(`Select ID: ${id}`)
+    const options = await GetOptions(page, id)
   }
-
   await browser.close();
 } 
 
